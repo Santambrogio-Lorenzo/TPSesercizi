@@ -1,0 +1,29 @@
+<html>
+<head>
+    <meta  charset =" UTF-8 " >
+    <meta  http-equiv =" X-UA-Compatible " content =" IE=edge " >
+    <meta  name =" viewport " content =" width=larghezza-dispositivo, scala-iniziale=1.0 " >
+    
+</head>
+<body>
+    <button  id =" btn "> CREA </button>
+    <h5  id =" h " > </h5>
+    <script>	document.getElementById("btn").addEventListener("click", function () {
+        var cifra="0";
+        
+                for (var a = [1, 2, 3, 4, 5], i = a.length; i--; ) { 
+                    var random = a.splice(Math.floor(Math.random() * (i + 1)), 1)[0];
+                    random=random.toString();
+                console.log(random); 
+                if(cifra=="0"){
+                    cifra=random
+                }else{
+                    cifra=cifra+random;
+                }
+                    } 
+                    console.log(cifra);
+                    document.getElementById("h").innerText = cifra;
+            
+              });</script>
+</body>
+</html>
