@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <link rel=" foglio di stile " href=" ./assets/style.css " />
+  </head>
+  <body>
+    <img
+      class="pulsante-mi piace-non-piace pulsante- mi piace"
+      src=" ./assets/like.svg "
+    />
+    <img
+      class="like-dislike-button dislike-button"
+      src=" ./assets/dislike.svg "
+    />
+
+    <script
+      src=" https://code.jquery.com/jquery-3.6.1.slim.min.js "
+      integrità=" sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA= "
+      crossorigin=" anonimo "
+    ></script>
+    <script>
+
+        $(documento).pronto(()=>{
+        var mipiace  =  falso , nonmipiace  =  falso ;
+
+        $(".like-button" ).fareclicsu ( ( )  =>  {
+          if ( come  ==  vero ) {
+            come  ==  falso ;
+            $(".like-button").attr("src" ,  "./assets/like.svg" ) ;
+          }else{
+            if (antipatia  ==  vero ) {
+              antipatia  =  falso ;
+              $ ( ".pulsante-non mi piace" ) . attr ( "src" ,  "./assets/dislike.svg" ) ;
+            }
+            mipiace  =  vero ;
+            $ ( ".like-button" ) . attr ( "src" ,  "./assets/like a.svg" ) ;
+          }
+        } ) ;
+
+        $ ( ".pulsante-non mi piace" ) . fareclicsu ( ( )  =>  {
+          if ( antipatia  ==  vero ) {
+            antipatia  ==  falso ;
+            $ ( ".pulsante-non mi piace" ) . attr ( "src" ,  "./assets/dislike.svg" ) ;
+          }else{
+            if ( come  ==  vero ) {
+              mipiace  =  falso ;
+              $ ( ".like-button" ) . attr ( "src" ,  "./assets/like.svg" ) ;
+            }
+            antipatia  =  vero ;
+            $ ( ".pulsante-non mi piace" ) . attr ( "src" ,  "./assets/dislike a.svg" ) ;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
